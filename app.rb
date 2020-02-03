@@ -15,8 +15,7 @@ get '/author' do
   "Josh Blumberg"
 end
 
-get '/named-cat' do
-  p params
+post '/named-cat' do
   @name = params[:name]
   erb(:index)
 end
@@ -24,5 +23,9 @@ end
 get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
+end
+
+get '/cat-form' do
+  erb(:cat_form)
 end
 
